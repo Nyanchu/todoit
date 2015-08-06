@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>TodoIt</title>
+  <script src="bower_components/react/react.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: rgba(41, 56, 77, 0.5);
+    }
+    #header {
+      padding: 10px;
+      color: #FFF;
+      background-color: rgba(49,127,147, 0.85);
+      text-align: center;
+      -webkit-app-region: drag; /* ドラッグ可能に */
+      -webkit-user-select: none; /* ドラッグはテキスト選択と競合するので禁止 */
+      cursor: default;
+    }
+    li {
+      margin: 1px;
+      padding: 10px;
+      font-size: 80%;
+      color: #666;
+      background-color: rgba(255, 255, 255, 0.85);
+      cursor: pointer;
+    }
+    button {
+      color: #FFF;
+      margin-right: 5px;
+      padding: 5px;
+      background-color: rgb(109, 173, 159);
+    }
+    #app-container {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="header">Todoit</div>
+  <div id="app-container"></div>
+</body>
+<script>require('electron-connect').client.create()</script>
+<script src="build/js/app.js"></script>
+</html>
